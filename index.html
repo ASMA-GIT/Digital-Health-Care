@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTHIER WE</title>
+
+    <!-- custom css file--> 
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--java script file-->
+    <script>
+    window.onload=() => {
+        var button =document.querySelector('.cal');
+        button.addEventListener('click',calculateBMI);
+    };
+    function calculateBMI()
+    {
+    var height=parseInt(document.querySelector(".height-field").value);
+    var weight=parseInt(document.querySelector(".weight-field").value);
+    var result=document.querySelector(".result");
+    
+    var bmi=(weight/((height*height)/10000)).toFixed(2);
+    
+    if (bmi < 18.6) result.innerHTML='Under Weight';
+    
+    else if (bmi >=18.6 && bmi< 24.9) result.innerHTML='Good To GO';
+    
+    else result.innerHTML='Over Weight';
+    }
+    </script> 
+    <script>
+        window.onload=() => {
+            var button2= document.querySelector('.health-but');
+            button2.addEventListener('click,quickSOL');
+        };
+    
+    function quickSOL()
+    {
+    var issue=document.querySelector("h-issues").value;
+        if (issue=="fever")
+        {
+            solution.innerHTML='aate hi rehta';
+         }
+        if (issue=="cold")
+        {
+           
+        }
+        if (issue=="throat-pain")
+        {
+            
+        }
+        if (issue=="fever")
+        {
+            
+        }
+
+
+
+
+
+    }
+
+    </script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="mainheader">
+            <div class="logo">
+                <img src="logo.png">
+            </div>
+
+            <nav class="navbar">
+                <a href="#">HOME</a>
+                <a href="#">APPOINTMENT</a>
+                <a href="#">ABOUT</a>
+                <a href="#">QUICKHELP</a>
+                <a href="#">REVIEW</a>
+            </nav>
+
+            <div class="menu">
+                <button>Help line</button>
+            </div>
+
+        </div>
+
+        <main class="main">
+            <section class="left-sec">
+                <h2> Digital<br>
+                     Health Care <br> 
+                    Service.</h2>
+                <h1>Consult the Docters. We are ready to help.</h1>
+
+
+            </section>
+
+            <section class="right-sec">
+                <img src="right-image.png" >
+
+            </section>
+        </main>
+
+
+    </header>
+
+
+                    <H1>CHECK MY HEALTH STATUS</H1>
+
+                <div class="cal-container">
+                    <h1>BMI CALCULATOR</h1>
+                    <p>Height in meters:</p>
+                    <input class="height-field" type="text">
+                    <p>Weight in Kilograms:</p>
+                    <input class="weight-field" type="text"><br><br>
+                    <button class="cal">Calculate</button>
+                </div>
+                
+                <h2 class="result"></h2>
+
+<p>
+    Helthier We gives one stop solution to all the health problems and queries you have.we are digitalizing the health care sector so that it reaches all over the globe where the internet is avalaible   
+</p>
+
+
+<h1>
+    Book An Appointment Now
+</h1>
+
+
+<select name="health issues" id="h-issues">
+    <option value="fever">fever</option>
+    <option value="cold">cold</option>
+    <option value="throat-pain">throat pain</option>
+    <option value="diabetes"></option>
+    <option value=""></option>
+    <option value=""></option>  
+</select>
+<br><br>
+<button class="health-but">View Sollutions</button>
+<br><br>
+<h2 class="solution"></h2>
+</body>
+</html>
+
+
+<chat>
+
+
+ 
+</chat>
