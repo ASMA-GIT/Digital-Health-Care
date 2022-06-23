@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap');
+
+
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
@@ -6,30 +10,36 @@
 
 header{
     width: 100%;
-    height: 250vh;
-    padding-top: 20px;
+    height: 100vh;
+    padding-top: 7rem;
     background-image: url('backg.png');
     background-repeat: no-repeat;
+    overflow:hidden;
 }
 
 .mainheader{
     width: 100%;
-    height: 100px;
+    height: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 3.125rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    position: fixed;
+    background: #fff;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
     
 }
 
 .mainheader .logo img{
-    width: 260px;
-    height: 100px;
+    width: 208px;
+    height: 80px;
     padding-left: 60px;
 }
 
 .mainheader nav{
-    width: 450px;
+    width: 10vh;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -38,19 +48,23 @@ header{
 
 .mainheader nav a{
     text-decoration: none;
-    color: black;
+    color: rgb(129, 93, 123);
     text-transform: capitalize;
+    font-size:large;
 }
 
 .mainheader button{
-    padding: 10px 45px;
+    padding: 6px 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
+    font:bolder;
     color:none;
-    background-color:#1bdde4;
+    background-color:#c7e9ec;
     border-radius: 10px;
+}
+.mainheader button:hover{
+    background-color: rgb(231, 244, 245);
     
-
 }
 
 main{
@@ -63,20 +77,420 @@ main{
 
 main .right-sec{
     padding-right: 150px;
-    padding-top: 0px
+    padding-top: 0vh;
     
-
 }
 
 main .left-sec{
-    padding-left: 120px;
-    padding-top:0px
-
+    padding-left: 130px;
 
 }
 
 .left-sec h2{
-    font-size: 100px
+    font-size: 6em;
+       
+}
+
+html{
+    height: 100%;
+}
+
+/* NAVBAR */
+
+.navbar a{
+    text-align: center;
+    padding: 0.8750em 1em;
+    text-decoration: none; 
+    transition: all 0.3s ease 0s;
+}
+.navbar a:hover{
+    color: #03e9f4;
+}
+
+/* ABOUT SECTION */
+
+
+.about  {
+    width: 100%;
+    height: 90vh;
 
 }
+
+
+.heading{
+    text-align: center;
+    color: #03e9f4;
+    font-size: 3em;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    text-shadow: rgb(108, 28, 28);
+    
+}
+.content h1{
+    text-align: center;
+    color: #e11e76;
+    font-size:xx-large;
+
+}
+
+.icons-container{
+    padding-top: 7vh;
+    display:grid;
+    gap:3rem;
+    background-color: rgb(245, 248, 249);
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    padding-bottom: rem;
+
+    height: 40vh;
+
+    --green:#20c7f0;
+    --black:#444;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.1rem .3rem 0 rgba(0, 0, 0, .2);
+    --border:.1rem solid var(--green);
+    padding-left: 8em;
+
+}
+
+.icons-container .icons{
+    width:15vw;
+    height:30vh;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 4em 2em 0em em;
+   
+}
+
+.icons-container .icons h3{
+    padding: 0rem 0;
+    font-size: 3.5rem;
+    color:var(--black);
+    text-shadow: var(--text-shadow);
+}
+
+
+.icons-container .icons i{
+    font-size: 100rem;
+    color:var(--green);
+    padding-bottom: 700rem;
+}
+
+.icons-container .icons p{
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+
+.doctors{
+    width: 100%;
+    height: 150vh;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:2rem;
+    padding-top: 7vh;
+
+
+
+    --green:#8adbef;
+    --black:#444;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.1rem .3rem 0 rgba(0, 0, 0, .2);
+    --border:.1rem solid var(--green);
+    padding-left: 8em;
+    padding-right: 4em;
+
+
+}
+
+.doctors .box-container .box{
+    text-align: center;
+    background:#fff;
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding:3rem;
+    width:25em;
+    height:max-content;
+
+
+}
+
+.doctors .box-container .box img{
+    height: 12rem;
+    width: 15rem;
+    border:var(--border);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctors .box-container .box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.doctors .box-container .box span{
+    color:var(--green);
+    font-size: 1.5rem;
+}
+
+.bmi{
+    height: 100vh;
+    padding-left: 7em;
+ }
+
+
+
+.bmi .left-sec img{
+    width: 35vw;
+    height: 80vh;
+}
+
+
+
+
+
+
+/*BMI CALCULATOR */
+
+
+.cal-container{
+    position: absolute;
+    top: 393%;
+    left:75%;
+    width:400px;
+    padding:40px;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 25px 25px rgba(20, 210, 224, 0.6);
+    border-radius: 10px;
+
+}
+.cal-container h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color:rgb(6, 6, 6);
+    text-align:center;
+
+}
+
+.cal-container .input-box{
+    position:relative;
+}
+
+.cal-container .input-box input{
+    width:100%;
+    padding:10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    border:none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background:transparent;
+}
+
+.cal-container .input-box label {
+    position: absolute;
+    top:0;
+    left:0;
+    padding:10px 0;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    pointer-events:none;
+    transition: .5s;
+}
+
+.cal-container .input-box input:focus ~ label,
+.cal-container .input-box input:active ~ label{
+    top:-20px;
+    left:0;
+    color: #03e9f4;
+    font-size:12px;
+}
+
+.cal-container form a {
+    position: relative;
+    display:inline-block;
+    padding:10px 20px;
+    color: #03e9f4;
+    font-size:16px;
+    text-decoration: none;
+    text-transform:uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.cal-container a:hover {
+    background: #34cccf;
+    color: rgb(255, 255, 255);
+    border-radius:5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+.cal-container a span {
+    position: absolute;
+    display:block;
+}
+
+.cal-container a span:nth-child(1){
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1{
+    0%{
+        left:-100%;
+    }
+    50%,100% {
+        left:100%;
+    }
+}
+.cal-container a span:nth-child(2) {
+    top:-100%;
+    right:0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#03e9f4);
+    animation:btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2{
+    0%{
+        top:-100%;
+    }
+    50%,100% {
+        top:100%;
+    }
+}
+.cal-container a span:nth-child(3){
+    bottom:0;
+    right:-100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#03e9f4);
+    animation:btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3{
+    0%{
+        right:-100%;
+    }
+    50%,100% {
+        right:100%;
+    }
+}
+
+.cal-container a span:nth-child(4){
+    bottom:-100%;
+    left:0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360 deg, transparent,#03e9f4);
+    animation:btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4{
+    0%{
+        bottom:-100%;
+    }
+    50%,100% {
+        bottom:100%;
+    }
+}
+
+.book{
+    padding-top:5em ;
+    height:70vh ;
+}
+
+.review{
+    height: 40vh;
+}
+
+
+w
+/*
+.slideshow{
+    overflow:hidden;
+    height: 500px;
+    width:728px;
+    margin:0 auto;
+}
+.slide-wrapper{
+    width:3000px;
+    animation:slide 18s infinite;
+}
+.image-container{
+    margin-top: 50px;
+    float: left;
+    height:500px;
+    width:728px;
+}
+.image-container:nth-child(1) {
+    background-image: url("backg.png");
+    }
+    .image-container:nth-child(2) {
+    background-image: url("bgg.png") ;
+    }
+    .image-container:nth-child(3) {
+    background-image: url("logo.png") ;
+    }
+    .image-container:nth-child(4) {
+    background-image: url("") ;
+    }
+    @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    70% {margin-left: -1456px;}
+    80% {margin-left: -2184px;}
+    90% {margin-left: -2184px;}
+    }
+ 
+    */
+
+
+.contact{
+    height: 50vh;
+    background-color: rgb(236, 232, 232);
+
+}
+
+
+
+.appt-container{
+        position: absolute;
+        top: 350%;
+        left:75%;
+        width:400px;
+        padding:40px;
+        transform: translate(-50%,-50%);
+        background: rgba(96, 5, 165, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+    
+}
+
 
