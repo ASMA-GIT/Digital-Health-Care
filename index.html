@@ -9,65 +9,18 @@
     <!-- custom css file--> 
     <link rel="stylesheet" href="style.css">
 
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!--java script file-->
-    <script>
-    window.onload=() => {
-        var button =document.querySelector('.cal');
-        button.addEventListener('click',calculateBMI);
-    };
-    function calculateBMI()
-    {
-    var height=parseInt(document.querySelector(".height-field").value);
-    var weight=parseInt(document.querySelector(".weight-field").value);
-    var result=document.querySelector(".result");
-    
-    var bmi=(weight/((height*height)/10000)).toFixed(2);
-    
-    if (bmi < 18.6) result.innerHTML='Under Weight';
-    
-    else if (bmi >=18.6 && bmi< 24.9) result.innerHTML='Good To GO';
-    
-    else result.innerHTML='Over Weight';
-    }
-    </script> 
-    <script>
-        window.onload=() => {
-            var button2= document.querySelector('.health-but');
-            button2.addEventListener('click,quickSOL');
-        };
-    
-    function quickSOL()
-    {
-    var issue=document.querySelector("h-issues").value;
-        if (issue=="fever")
-        {
-            solution.innerHTML='aate hi rehta';
-         }
-        if (issue=="cold")
-        {
-           
-        }
-        if (issue=="throat-pain")
-        {
-            
-        }
-        if (issue=="fever")
-        {
-            
-        }
-
-
-
-
-
-    }
-
-    </script>
+    <!--java script file -->
+    <script  type="text/javascript" src="script.js"></script>
 
 </head>
 <body>
+    
+    <!--home section begin-->
     <header class="header">
+        <!-- header section starts-->
         <div class="mainheader">
             <div class="logo">
                 <img src="logo.png">
@@ -75,25 +28,23 @@
 
             <nav class="navbar">
                 <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">QUICKHELP</a>
-                <a href="#">APPOINTMENT</a>
-                <a href="#">REVIEW</a>
+                <a href="#aboutsection">ABOUT</a>
+                <a href="#doctorssection">DOCTORS</a>
+                <a href="#bmisection">BMI</a>
+                <a href="#reviewsection">REVIEW</a>
+                <a href="regform.html">SIGNUP</a>
             </nav>
-
             <div class="menu">
-                <button>Help line</button>
+                <button>Book Appointment</button>
             </div>
-
         </div>
-
+        <!-- header section ends-->
         <main class="main">
             <section class="left-sec">
                 <h2> Digital<br>
                      Health Care <br> 
                     Service.</h2>
-                <h1>Consult the Docters. We are ready to help.</h1>
-
+                <h1>Consult the Doctors. We are ready to help.</h1>
 
             </section>
 
@@ -103,36 +54,296 @@
             </section>
         </main>
 
-
     </header>
+    <!--home section ends-->
 
 
-                    <H1>CHECK MY HEALTH STATUS</H1>
+    <!--About section begins -->
+    <a name="aboutsection"></a>
+    <section class="about" >
+        <h1 class="heading"><span> About </span> Us</h1>
+        <section class="icons-container">
 
-                <div class="cal-container">
-                    <h1>BMI CALCULATOR</h1>
-                    <p>Height in meters:</p>
-                    <input class="height-field" type="text">
-                    <p>Weight in Kilograms:</p>
-                    <input class="weight-field" type="text"><br><br>
-                    <button class="cal">Calculate</button>
+            <div class="icons">
+                <i class="first"></i>
+                <h3>140+</h3>
+                <p>Docters at work</p>
+            </div>
+
+            <div class="icons">
+                <i class="second"></i>
+                <h3>1040+</h3>
+                <p>Satisfied Patients</p>
+            </div>
+
+            <div class="icons">
+                <i class="third"></i>
+                <h3>24/7</h3>
+                <p>Service</p>
+            </div>
+            
+            <div class="icons">
+                <i class="four"></i>
+                <h3>80+</h3>
+                <p>Hospitals</p>
+            </div>
+            
+        </section>
+
+        <section>
+            <div class="image">
+                <img src="#">
+            </div>
+
+            <div class="content">
+                <h1>
+                        "HELTHIER WE" gives one stop solution to all the health problems and queries you have.we are digitalizing the health care sector so that it reaches all over the globe where the internet is avalaible.  
+                </h1>
+            </div>
+        </section>
+    </section>
+    <!--About section ends -->
+    
+
+    
+    <!--Docters section begins -->
+    <a name="doctorssection"></a>
+    <section class="doctors">
+        <h1 class="heading">Our <span>Doctors</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="doc1.png" alt="">
+                <h3>William A</h3>
+                <span>general physician</span>
+            </div>
+
+            <div class="box">
+                <img src="doc2.jpeg" alt="">
+                <h3>Khalid Abbed</h3>
+                <span>Dentist</span>
+            </div>
+
+            <div class="box">
+                <img src="doc3.png" alt="">
+                <h3>Fillmore C</h3>
+                <span>ENT specialist</span>
+            </div>
+
+            <div class="box">
+                <img src="doc4.jpg" alt="">
+                <h3>Tanya sale</h3>
+                <span>Children specialist</span>
+            </div>
+
+            <div class="box">
+                <img src="doc5.jpg" alt="">
+                <h3>  Naresh kaul    </h3>
+                <span>Homeopathic</span>
+            </div>
+
+            <div class="box">
+                <img src="doc6.jpg" alt="">
+                <h3>J N Mishra</h3>
+                <span>Cardiologist</span>
+            </div>
+        </div>
+        
+
+
+    </section >
+    <!-- doctors section ends -->
+
+
+    <!--BMI section begin -->
+    <a name="bmisection"></a>
+    <section class="bmi">
+        <h1 class="heading">Body Mass <span>Index</span></h1>
+        <br><h4>Check your health status..........</h4>
+        <div class="left-sec">
+            <img src="bmi1.png">
+
+        </div>
+
+            <div class="cal-container">
+                <H2>BMI CALCULATOR</H2>
+                <form>
+                    <div class="input-box">
+                        <input class="height-field" type="text">
+                        <label>HEIGHT IN cms</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input class="weight-field" type="text"><br><br>
+                        <label>WEIGHT IN kgs</label>
+                    </div>
+                    <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    CALCULATE
+                    </a>
+                </form>
+            </div>
+
+
+    </section>
+    <!--BMI section ends -->
+
+    <!--Appoinment section begin -->
+
+
+
+
+<section class="book" id="book">
+
+    <h1 class="heading"> <span>book</span> Appoinment </h1>    
+
+    <div class="row">
+
+        <div class="image">
+            <img src="#" alt="">
+        </div>
+
+        <form id="login-form" method="post" action="validation.php">
+            <h3>Book appointment</h3>
+            <input type="text" placeholder="enter name" class="box">
+            <input type="number" placeholder="enter number" class="box">
+            <input type="email" placeholder="enter email" class="box">
+            <input type="date" class="box">
+            <input type="date" class="box">
+            <input type="submit" value="book now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+    <!--Appoinment section ends -->
+
+
+
+    <!--Review section begin -->
+
+
+
+    <section class="review" id="review">
+    
+        <h1 class="heading"> client's <span>review</span> </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <img src="#" alt="">
+                <h3>John Rheo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
                 </div>
-                
-                <h2 class="result"></h2>
+                <p class="text">-----</p>
+            </div>
+    
+            <div class="box">
+                <img src="#" alt="">
+                <h3>Mark</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">----</p>
+            </div>
+    
+            <div class="box">
+                <img src="#" alt="">
+                <h3>kenny</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text">-------</p>
+            </div>
+    
+        </div>
+    
+    </section>
 
-<p>
-    Helthier We gives one stop solution to all the health problems and queries you have.we are digitalizing the health care sector so that it reaches all over the globe where the internet is avalaible   
-</p>
-
-
-<h1>
-    Book An Appointment Now
-</h1>
 
 
 
+
+        </form>
+      </div>
+      <!--login-form-wrap-->
+      <!-- partial -->
+
+    <section class="contact">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+                </div>
+        
+                <div class="box">
+                    <h3>our services</h3>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+                </div>
+        
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> healthierwe@gmail.com </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> techbuddies@gmail.com </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i>Mumbai, India - 400104 </a>
+                </div>
+        
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                    <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+                </div>
+        
+            </div>
+        
+            <div class="credit"> created by <span>Tom & Jerry</span> | all rights reserved </div>
+    </section>
+    
+    
+    
+    
+    
+
+     
 </body>
 </html>
-
 
 
