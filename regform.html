@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+<div class="wrapper">
+        <div class="form-left">
+            <h2 class="text-uppercase">information</h2>
+            <p>
+                By registering with HealthierWe you can keep track of all your health issues and book appointments for your further requirements </p>
+            <p class="text">
+                <span>Our Moto:To Digitalize everyone in the health sector by maintaining the privacy of each individual</span>
+                
+            </p>
+            <div class="form-field">
+                <a href=logform.html><b>"Have an Account?"</b></a>
+            </div>
+        </div>
+        <form class="form-right" method="post" action="registration.php">
+            <h2 class="text-uppercase">Registration form</h2>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label>Name</label>
+                    <input type="text" name="name" id="name" class="input-field">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label>phone no</label>
+                    <input type="number" name="pno" id="pno" class="input-field">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Your Email</label>
+                <input type="email" class="input-field" name="email" required>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" class="input-field">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label>Confirm Password</label>
+                    <input type="password" name="cpwd" id="cpwd" class="input-field">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="option">I agree to the <a href="#">Terms and Conditions</a>
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Register" class="register" name="register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

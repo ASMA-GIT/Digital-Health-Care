@@ -1,0 +1,5 @@
+{
+    "gitlens.views.branches.pullRequests.enabled": true,
+    "gitlens.plusFeatures.enabled": true,
+    "git.enabled": true
+}
