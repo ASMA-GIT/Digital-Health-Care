@@ -12,30 +12,31 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+
     <!--java script file -->
-    <script  type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
 </head>
 <body>
-    
+    <a name="home"></a>
     <!--home section begin-->
     <header class="header">
         <!-- header section starts-->
         <div class="mainheader">
             <div class="logo">
-                <img src="logo.png">
+                <img src="images/logo.png">
             </div>
 
             <nav class="navbar">
-                <a href="#">HOME</a>
-                <a href="#aboutsection">ABOUT</a>
-                <a href="#doctorssection">DOCTORS</a>
-                <a href="#bmisection">BMI</a>
-                <a href="#reviewsection">REVIEW</a>
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#doctors">DOCTORS</a>
+                <a href="#bmi">BMI</a>
+                <a href="#review">REVIEW</a>
                 <a href="regform.html">SIGNUP</a>
             </nav>
             <div class="menu">
-                <button>Book Appointment</button>
+                <button><a href=#booka>Appointment</a></button>
             </div>
         </div>
         <!-- header section ends-->
@@ -49,7 +50,7 @@
             </section>
 
             <section class="right-sec">
-                <img src="right-image.png" >
+                <img src="images/right-image.png" >
 
             </section>
         </main>
@@ -59,31 +60,31 @@
 
 
     <!--About section begins -->
-    <a name="aboutsection"></a>
+    <a name="about"></a>
     <section class="about" >
         <h1 class="heading"><span> About </span> Us</h1>
         <section class="icons-container">
 
             <div class="icons">
-                <i class="first"></i>
+                <i class="fas fa-user-md"></i>
                 <h3>140+</h3>
                 <p>Docters at work</p>
             </div>
 
             <div class="icons">
-                <i class="second"></i>
+                <i class="fas fa-users"></i>
                 <h3>1040+</h3>
                 <p>Satisfied Patients</p>
             </div>
 
             <div class="icons">
-                <i class="third"></i>
+                <i class="fas fa-procedures"></i>
                 <h3>24/7</h3>
                 <p>Service</p>
             </div>
             
             <div class="icons">
-                <i class="four"></i>
+                <i class="fas fa-hospital"></i>
                 <h3>80+</h3>
                 <p>Hospitals</p>
             </div>
@@ -91,62 +92,59 @@
         </section>
 
         <section>
-            <div class="image">
-                <img src="#">
-            </div>
-
             <div class="content">
                 <h1>
                         "HELTHIER WE" gives one stop solution to all the health problems and queries you have.we are digitalizing the health care sector so that it reaches all over the globe where the internet is avalaible.  
                 </h1>
             </div>
+            <a name="doctors"></a>
         </section>
     </section>
     <!--About section ends -->
-    
 
+   
     
-    <!--Docters section begins -->
-    <a name="doctorssection"></a>
+    <!--Docters section begins --><a name="doctors"></a>
     <section class="doctors">
         <h1 class="heading">Our <span>Doctors</span></h1>
 
         <div class="box-container">
             <div class="box">
-                <img src="doc1.png" alt="">
+                <img src="images/doc1.png" alt="">
                 <h3>William A</h3>
-                <span>general physician</span>
+                <span>General physician</span>
             </div>
 
             <div class="box">
-                <img src="doc2.jpeg" alt="">
+                <img src="images/doc2.jpeg" alt="">
                 <h3>Khalid Abbed</h3>
                 <span>Dentist</span>
             </div>
 
             <div class="box">
-                <img src="doc3.png" alt="">
+                <img src="images/doc3.png" alt="">
                 <h3>Fillmore C</h3>
                 <span>ENT specialist</span>
             </div>
 
             <div class="box">
-                <img src="doc4.jpg" alt="">
+                <img src="images/doc4.jpg" alt="">
                 <h3>Tanya sale</h3>
                 <span>Children specialist</span>
             </div>
 
             <div class="box">
-                <img src="doc5.jpg" alt="">
+                <img src="images/doc5.jpg" alt="">
                 <h3>  Naresh kaul    </h3>
                 <span>Homeopathic</span>
             </div>
 
             <div class="box">
-                <img src="doc6.jpg" alt="">
+                <img src="images/doc6.jpg" alt="">
                 <h3>J N Mishra</h3>
-                <span>Cardiologist</span>
+                <span>Cardiologist</span> 
             </div>
+            <a name="bmi"></a>
         </div>
         
 
@@ -156,14 +154,12 @@
 
 
     <!--BMI section begin -->
-    <a name="bmisection"></a>
+
     <section class="bmi">
         <h1 class="heading">Body Mass <span>Index</span></h1>
-        <br><h4>Check your health status..........</h4>
-        <div class="left-sec">
-            <img src="bmi1.png">
-
-        </div>
+            <div class="left-sec">
+                <img src="images/bmi.png">
+            </div>
 
             <div class="cal-container">
                 <H2>BMI CALCULATOR</H2>
@@ -172,22 +168,22 @@
                         <input class="height-field" type="text">
                         <label>HEIGHT IN cms</label>
                     </div>
-
                     <div class="input-box">
                         <input class="weight-field" type="text"><br><br>
                         <label>WEIGHT IN kgs</label>
+                        <h2 class="result"></h2>
                     </div>
-                    <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <a onclick="calculateBMI()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     CALCULATE
                     </a>
                 </form>
             </div>
 
-
+    <a name="booka"></a>
     </section>
     <!--BMI section ends -->
 
@@ -195,41 +191,34 @@
 
 
 
+    <a name="review"></a>
+    
+    <section class="book">
+        <h1 class="heading"> <span>book</span> Here </h1>    
+        <div class="row">
 
-<section class="book" id="book">
-
-    <h1 class="heading"> <span>book</span> Appoinment </h1>    
-
-    <div class="row">
-
-        <div class="image">
-            <img src="#" alt="">
-        </div>
-
-        <form id="login-form" method="post" action="validation.php">
-            <h3>Book appointment</h3>
-            <input type="text" placeholder="enter name" class="box">
-            <input type="number" placeholder="enter number" class="box">
-            <input type="email" placeholder="enter email" class="box">
-            <input type="date" class="box">
-            <input type="date" class="box">
-            <input type="submit" value="book now" class="btn">
-        </form>
-
-    </div>
-
-</section>
-
-
-
+            <div class="form">
+                <form >
+                    <h2>Book appointment</h2>
+                    <input type="text" placeholder="enter name" class="box" required>
+                    <input type="number" placeholder="enter number" class="box" required>
+                    <input type="email" placeholder="enter email" class="box" required>
+                    <input type="date" class="box" required><br><br>
+                    <input type="submit" value="book now" class="btn" onclick="booknow()" >
+                </form>
+            </div>
+            <div class="right-col">
+                <img src="images/appoin.png" alt="ntg">
+            </div>
+    </section>
 
     <!--Appoinment section ends -->
 
 
 
+
+
     <!--Review section begin -->
-
-
 
     <section class="review" id="review">
     
@@ -238,7 +227,7 @@
         <div class="box-container">
     
             <div class="box">
-                <img src="#" alt="">
+                <img src="images/review1.jpg" alt="">
                 <h3>John Rheo</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -247,11 +236,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">-----</p>
+                <p class="text">Most comfortable and one stop solution to all my health queries</p>
             </div>
     
             <div class="box">
-                <img src="#" alt="">
+                <img src="images/review2.jpg" alt="">
                 <h3>Mark</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -260,11 +249,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">----</p>
+                <p class="text">UI is awesome easy to book appointments </p>
             </div>
     
             <div class="box">
-                <img src="#" alt="">
+                <img src="images/review3.jpeg" alt="">
                 <h3>kenny</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -273,7 +262,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="text">-------</p>
+                <p class="text">wide range of doctors available 24/7 for any kind of emergency</p>
             </div>
     
         </div>
@@ -281,13 +270,7 @@
     </section>
 
 
-
-
-
-        </form>
-      </div>
-      <!--login-form-wrap-->
-      <!-- partial -->
+    <!--contact section begins-->
 
     <section class="contact">
 
@@ -295,19 +278,19 @@
         
                 <div class="box">
                     <h3>quick links</h3>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> home </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> services </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> about </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> doctors </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> book </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> review </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> blogs </a>
+                    <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+                    <a href="#about"> <i class="fas fa-chevron-right"></i> about</a>
+                    <a href="#doctors"> <i class="fas fa-chevron-right"></i> doctors </a>
+                    <a href="#bmi"> <i class="fas fa-chevron-right"></i> bmi </a>
+                    <a href="#review"> <i class="fas fa-chevron-right"></i> review </a>
+                    <a href="regform.html"> <i class="fas fa-chevron-right"></i>register</a>
+                    <a href="#book"> <i class="fas fa-chevron-right"></i>book appointment</a>
                 </div>
         
                 <div class="box">
-                    <h3>our services</h3>
+                    <h3>services</h3>
                     <a href="#"> <i class="fas fa-chevron-right"></i> dental care </a>
-                    <a href="#"> <i class="fas fa-chevron-right"></i> message therapy </a>
+                    <a href="#"> <i class="fas fa-chevron-right"></i> massage therapy </a>
                     <a href="#"> <i class="fas fa-chevron-right"></i> cardioloty </a>
                     <a href="#"> <i class="fas fa-chevron-right"></i> diagnosis </a>
                     <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
@@ -315,11 +298,11 @@
         
                 <div class="box">
                     <h3>contact info</h3>
-                    <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-                    <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +91 6067898756</a>
+                    <a href="#"> <i class="fas fa-phone"></i> +91 7654345678 </a>
                     <a href="#"> <i class="fas fa-envelope"></i> healthierwe@gmail.com </a>
                     <a href="#"> <i class="fas fa-envelope"></i> techbuddies@gmail.com </a>
-                    <a href="#"> <i class="fas fa-map-marker-alt"></i>Mumbai, India - 400104 </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i>Hyderabad, India - 500065 </a>
                 </div>
         
                 <div class="box">
@@ -334,15 +317,11 @@
         
             </div>
         
-            <div class="credit"> created by <span>Tom & Jerry</span> | all rights reserved </div>
+            <div class="credit"> created by <span>Tech_Buddies</span> | all rights reserved </div>
     </section>
+    <!--contact section ends-->   
     
     
-    
-    
-    
-
-     
 </body>
 </html>
 
