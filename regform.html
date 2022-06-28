@@ -16,7 +16,7 @@
                 <a href=logform.html><b>"Have an Account?"</b></a>
             </div>
         </div>
-        <form class="form-right" method="post" action="registration.php">
+        <div class="form-right">
             <h2 class="text-uppercase">Registration form</h2>
             <div class="row">
                 <div class="col-sm-6 mb-3">
@@ -30,12 +30,12 @@
             </div>
             <div class="mb-3">
                 <label>Your Email</label>
-                <input type="email" class="input-field" name="email" required>
+                <input type="email" id="email" class="input-field" name="email" required>
             </div>
             <div class="row">
                 <div class="col-sm-6 mb-3">
                     <label>Password</label>
-                    <input type="password" name="password" id="password" class="input-field">
+                    <input type="password" id="password" name="password" class="input-field">
                 </div>
                 <div class="col-sm-6 mb-3">
                     <label>Confirm Password</label>
@@ -49,9 +49,69 @@
                 </label>
             </div>
             <div class="form-field">
-                <input type="submit" value="Register" class="register" name="register">
+                <button id="Register" value="Register" class="Register" name="Register">submit</button>
             </div>
-        </form>
+        </div>
     </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+        import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyCcGqW996lHHYUsOMMsK-wTTvdgGKHebMI",
+          authDomain: "healthierwe-4d9e4.firebaseapp.com",
+          projectId: "healthierwe-4d9e4",
+          storageBucket: "healthierwe-4d9e4.appspot.com",
+          messagingSenderId: "483118630289",
+          appId: "1:483118630289:web:59140dc8abe27328374630"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+        Register.addEventListener('click',(e) =>{
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    set(ref(database, 'users/' + user.uid), {
+    email: email,
+    password: password
+  })
+  .then(() => {
+  // Data saved successfully!
+  alert('Registered Successfully');
+})
+.catch((error) => {
+  // The write failed...
+  alert(error);
+});
+
+
+    
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+    // ..
+  });
+           
+});
+
+      </script>
 </body>
 </html>
